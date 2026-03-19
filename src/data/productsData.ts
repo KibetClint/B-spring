@@ -9,6 +9,20 @@ import printerFront from "@/assets/products/printer-front.jpg";
 import printerSide from "@/assets/products/printer-side.jpg";
 import laptopFront from "@/assets/products/laptop-front.jpg";
 import laptopSide from "@/assets/products/laptop-side.jpg";
+import palletTruckScale from "@/assets/products/pallet-truck-scale.jpg";
+import platformScale from "@/assets/products/platform-scale.jpg";
+import electronicScale from "@/assets/products/electronic-scale.jpg";
+import palletWeighing from "@/assets/products/pallet-weighing.jpg";
+import weighspringSoftware from "@/assets/products/weighspring-software.jpg";
+import timespringSoftware from "@/assets/products/timespring-software.jpg";
+import payrollspringSoftware from "@/assets/products/payrollspring-software.jpg";
+import secuspringSoftware from "@/assets/products/secuspring-software.jpg";
+import safetyspringSoftware from "@/assets/products/safetyspring-software.jpg";
+import parkspringSoftware from "@/assets/products/parkspring-software.jpg";
+import smartphoneImg from "@/assets/products/smartphone.jpg";
+import androidPosImg from "@/assets/products/android-pos.jpg";
+import networkEquipmentImg from "@/assets/products/network-equipment.jpg";
+import accessoriesImg from "@/assets/products/accessories.jpg";
 
 export interface Product {
   slug: string;
@@ -88,6 +102,7 @@ export const productsData: Product[] = [
     capacity: "Up to 3000 kg",
     description: "Portable pallet truck with integrated weighing system for on-the-go measurements.",
     icon: Scale,
+    images: [palletTruckScale, weighingEquipment],
     highlights: [
       "Mobile weighing solution",
       "Easy-to-read digital display",
@@ -113,6 +128,7 @@ export const productsData: Product[] = [
     capacity: "Up to 5000 kg",
     description: "Heavy-duty platform scale with anti-slip checkered plate surface.",
     icon: Scale,
+    images: [platformScale, weighingEquipment],
     highlights: [
       "Anti-slip checkered plate surface",
       "Includes loading ramp",
@@ -138,6 +154,7 @@ export const productsData: Product[] = [
     capacity: "Various capacities",
     description: "Versatile electronic platform scale suitable for commercial and industrial applications.",
     icon: Scale,
+    images: [electronicScale, weighingEquipment],
     highlights: [
       "Multiple capacity options available",
       "RS232/USB connectivity",
@@ -163,6 +180,7 @@ export const productsData: Product[] = [
     capacity: "Up to 10000 kg",
     description: "Industrial-grade pallet weighing system with advanced load cell technology.",
     icon: Scale,
+    images: [palletWeighing, weighingEquipment],
     highlights: [
       "Heavy-duty 10-ton capacity",
       "IP68 waterproof load cells",
@@ -190,6 +208,7 @@ export const productsData: Product[] = [
     subtitle: "Weighbridge Management System",
     description: "Comprehensive weighbridge management software for automated vehicle weighing, ticketing, and reporting.",
     icon: Code,
+    images: [weighspringSoftware],
     highlights: [
       "Automated vehicle weighing",
       "Real-time data processing",
@@ -223,6 +242,7 @@ export const productsData: Product[] = [
     subtitle: "Time-released Messaging Platform",
     description: "Time-released messaging system for scheduled communications and automated notifications.",
     icon: Clock,
+    images: [timespringSoftware],
     highlights: [
       "Scheduled message delivery",
       "Multi-channel support",
@@ -256,6 +276,7 @@ export const productsData: Product[] = [
     subtitle: "Payroll Processing System",
     description: "Automated payroll processing system with tax compliance and employee self-service portal.",
     icon: DollarSign,
+    images: [payrollspringSoftware],
     highlights: [
       "Automated payroll calculation",
       "Tax compliance management",
@@ -289,6 +310,7 @@ export const productsData: Product[] = [
     subtitle: "Security Management Module",
     description: "Comprehensive security management module with access control and monitoring capabilities.",
     icon: Shield,
+    images: [secuspringSoftware],
     highlights: [
       "Access control management",
       "Real-time monitoring",
@@ -322,6 +344,7 @@ export const productsData: Product[] = [
     subtitle: "Safety Management System",
     description: "Safety management system for workplace incident tracking and compliance monitoring.",
     icon: Shield,
+    images: [safetyspringSoftware],
     highlights: [
       "Incident tracking",
       "Safety compliance",
@@ -355,6 +378,7 @@ export const productsData: Product[] = [
     subtitle: "Park Management System",
     description: "Park and facility management software for recreation centers, parks, and public spaces.",
     icon: ParkingCircle,
+    images: [parkspringSoftware],
     highlights: [
       "Booking management",
       "Facility scheduling",
@@ -439,6 +463,7 @@ export const productsData: Product[] = [
     categoryUrl: "/products/hardware",
     description: "Rugged and standard smartphones for mobile weighing applications and field operations.",
     icon: Smartphone,
+    images: [smartphoneImg],
     highlights: [
       "Barcode scanning capability",
       "Rugged durability",
@@ -463,6 +488,7 @@ export const productsData: Product[] = [
     categoryUrl: "/products/hardware",
     description: "All-in-one Android POS terminal with integrated printer and multiple connectivity options.",
     icon: Monitor,
+    images: [androidPosImg],
     highlights: [
       "All-in-one design",
       "Built-in thermal printer",
@@ -487,6 +513,7 @@ export const productsData: Product[] = [
     categoryUrl: "/products/hardware",
     description: "Industrial-grade networking solutions for connecting weighing systems and IoT devices.",
     icon: Wifi,
+    images: [networkEquipmentImg],
     highlights: [
       "Industrial-grade reliability",
       "Wide temperature range",
@@ -511,6 +538,7 @@ export const productsData: Product[] = [
     categoryUrl: "/products/hardware",
     description: "Complete range of accessories including cables, mounts, power supplies, and protective cases.",
     icon: Monitor,
+    images: [accessoriesImg],
     highlights: [
       "Wide range of options",
       "Quality components",

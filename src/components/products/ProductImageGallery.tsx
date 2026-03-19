@@ -19,7 +19,7 @@ const ProductImageGallery = ({ images, productName }: ProductImageGalleryProps) 
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2 sm:space-y-4">
       {/* Main Image */}
       <div className="relative aspect-square rounded-lg overflow-hidden bg-secondary/30 group">
         <img
