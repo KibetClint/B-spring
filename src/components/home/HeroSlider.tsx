@@ -113,36 +113,6 @@ const HeroSlider = () => {
           ))}
         </div>
       </div>
-
-      {/* Navigation Buttons */}
-      <button
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-primary-foreground/20 backdrop-blur-sm hover:bg-primary-foreground/30 text-primary-foreground p-3 rounded-full transition-smooth"
-        onClick={scrollPrev}
-        aria-label="Previous slide">
-        <ChevronLeft className="h-3 w-3" />
-      </button>
-      <button
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-primary-foreground/20 backdrop-blur-sm hover:bg-primary-foreground/30 text-primary-foreground p-3 rounded-full transition-smooth"
-        onClick={scrollNext}
-        aria-label="Next slide">
-        <ChevronRight className="h-3 w-3" />
-      </button>
-
-      {/* Dots Indicator */}
-      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`h-2 rounded-full transition-all ${
-              index === selectedIndex
-                ? "w-8 bg-primary-foreground"
-                : "w-2 bg-primary-foreground/40 hover:bg-primary-foreground/60"
-            }`}
-            onClick={() => emblaApi?.scrollTo(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div> */}
     </section>
   );
 };
