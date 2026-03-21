@@ -17,6 +17,9 @@ import IntegrationService from "./pages/services/IntegrationService";
 import CCTVService from "./pages/services/CCTVService";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
+import FAQ from "./pages/FAQ";
+import SolutionsPage from "./pages/Solutions";
+import Consultation from "./pages/Consultation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +45,9 @@ const App = () => (
           <Route path="/services/cctv-installation" element={<CCTVService />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/quote" element={<Quote />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/solutions" element={<SolutionsPage />} />
+          <Route path="/consultation" element={<Consultation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

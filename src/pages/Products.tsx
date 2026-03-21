@@ -3,7 +3,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Scale, Code, Monitor } from "lucide-react";
+import { ArrowRight, Scale, Code, Monitor, Download } from "lucide-react";
 import { productsData } from "@/data/productsData";
 
 const Products = () => {
@@ -39,9 +39,15 @@ const Products = () => {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-primary-foreground mb-4 sm:mb-6 text-3xl sm:text-4xl lg:text-5xl">Our Products</h1>
-              <p className="text-base sm:text-xl text-primary-foreground/90">
+              <p className="text-base sm:text-xl text-primary-foreground/90 mb-6">
                 Comprehensive range of weighing solutions, software, and technology products
               </p>
+              <a href="/brickspring-catalog.pdf" download>
+                <Button variant="accent" size="lg" className="gap-2">
+                  <Download className="h-4 w-4" />
+                  Download Catalog (PDF)
+                </Button>
+              </a>
             </div>
           </div>
         </section>

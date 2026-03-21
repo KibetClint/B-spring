@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.png";
+import TopBar from "./TopBar";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -36,6 +37,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+      <TopBar />
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -129,6 +131,29 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link to="/solutions">
+                  <NavigationMenuLink
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-smooth ${
+                      isActive("/solutions")
+                        ? "bg-primary text-primary-foreground"
+                        : "hover:bg-secondary"
+                    }`}>
+                    Solutions
+                  </NavigationMenuLink>
+                </Link>{" "}
+                <Link to="/consultation">
+                  <NavigationMenuLink
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-smooth ${
+                      isActive("/consultation")
+                        ? "bg-primary text-primary-foreground"
+                        : "hover:bg-secondary"
+                    }`}>
+                    Consultations
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link to="/about">
                   <NavigationMenuLink
                     className={`px-4 py-2 rounded-md text-sm font-medium transition-smooth ${
@@ -210,6 +235,26 @@ const Header = () => {
               }`}
               onClick={() => setMobileMenuOpen(false)}>
               Services
+            </Link>
+            <Link
+              to="/solutions"
+              className={`block px-4 py-2 rounded-md ${
+                isActive("/solutions")
+                  ? "bg-primary text-primary-foreground"
+                  : "hover:bg-secondary"
+              }`}
+              onClick={() => setMobileMenuOpen(false)}>
+              Solutions
+            </Link>{" "}
+            <Link
+              to="/consultation"
+              className={`block px-4 py-2 rounded-md ${
+                isActive("/consultation")
+                  ? "bg-primary text-primary-foreground"
+                  : "hover:bg-secondary"
+              }`}
+              onClick={() => setMobileMenuOpen(false)}>
+              Consultation
             </Link>
             <Link
               to="/about"
