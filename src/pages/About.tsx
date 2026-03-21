@@ -5,19 +5,19 @@ import { Award, Target, Eye, Users, Linkedin, Mail } from "lucide-react";
 import ceoImg from "@/assets/team/C.E.O.jpg";
 import ctoImg from "@/assets/team/KIBET.jpg";
 import leadEngineerImg from "@/assets/team/CLINT.jpg";
-import salesManagerImg from "@/assets/team/HILLARY.jpg";
+import salesManagerImg from "@/assets/team/Manuel.png";
 
 const teamMembers = [
   {
-    name: "Enoch Koech",
+    name: "Enoch",
     role: "CEO & Founder",
     image: ceoImg,
-    bio: "With over 15 years in technology and weighing solutions, David leads Brickspring's vision for innovation and growth across East Africa.",
+    bio: "With over 15 years in technology and weighing solutions, Enoch leads Brickspring's vision for innovation and growth across East Africa.",
     linkedin: "#",
     email: "enoch@brickspring.co.ke",
   },
   {
-    name: "Japhet Kibet",
+    name: "Japhet",
     role: "Chief Technology Officer",
     image: ctoImg,
     bio: "Japhet drives our technology strategy, overseeing software development, cybersecurity services, and system integration projects.",
@@ -25,7 +25,7 @@ const teamMembers = [
     email: "grace@brickspring.co.ke",
   },
   {
-    name: "Clinton Kibet",
+    name: "Clinton",
     role: "Software Engineer",
     image: leadEngineerImg,
     bio: "Expert in software development and system integration.",
@@ -33,12 +33,12 @@ const teamMembers = [
     email: "brian@brickspring.co.ke",
   },
   {
-    name: "Seraphine Koriri",
-    role: "Sales & Partnerships Manager",
+    name: "Emmanuel",
+    role: "Lead Engineer",
     image: salesManagerImg,
-    bio: "Seraphine cultivates client relationships and strategic partnerships, ensuring every customer receives tailored solutions.",
+    bio: "Brian manages our weighing equipment division, ensuring precision calibration and top-tier hardware solutions for all clients.",
     linkedin: "#",
-    email: "seraphine@brickspring.co.ke",
+    email: "emmanuel@brickspring.co.ke",
   },
 ];
 
@@ -48,7 +48,7 @@ const About = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="gradient-hero py-20">
+        <section className="gradient-hero py-10">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-primary-foreground mb-6 text-center">
@@ -149,7 +149,7 @@ const About = () => {
                 <Card
                   key={index}
                   className="group overflow-hidden border-2 hover:border-accent transition-smooth hover:shadow-xl">
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-54 overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -187,7 +187,7 @@ const About = () => {
         </section>
 
         {/* Mission, Vision, Values */}
-        <section className="py-20 bg-background">
+        <section className="py-10 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card className="border-2 hover:border-accent transition-smooth">
