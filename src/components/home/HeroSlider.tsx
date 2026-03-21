@@ -69,7 +69,7 @@ const HeroSlider = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative overflow-hidden bg-background">
+    <section className="relative overflow-hidden bg-background text-center">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
           {slides.map((slide, index) => (
@@ -86,7 +86,7 @@ const HeroSlider = () => {
                 </div>
 
                 {/* Content */}
-                <div className="container mx-auto px-4 lg:px-8 py-10 sm:py-14 lg:py-20 relative z-10">
+                <div className="container mx-auto px-4 lg:px-8 py-10 sm:py-14 lg:py-10 relative z-10">
                   <div className="max-w-3xl animate-fade-in">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-primary-foreground mb-3 sm:mb-4 lg:mb-6 leading-tight">
                       {slide.title}
@@ -96,17 +96,16 @@ const HeroSlider = () => {
                       {slide.description}
                     </p>
 
-                    <div className="flex flex-col items-center sm:flex-row sm:items-start gap-3 sm:gap-4">
+                    <div className="flex justify-center">
                       <Link to={slide.cta.link}>
                         <Button
                           variant="accent"
                           size="lg"
-                          className="group w-full sm:w-auto">
+                          className="group w-full sm:w-auto text-center">
                           {slide.cta.text}
                           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Button>
                       </Link>
-                   
                     </div>
                   </div>
                 </div>
@@ -116,20 +115,6 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Navigation Buttons */}
-      <button
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-primary-foreground/20 backdrop-blur-sm hover:bg-primary-foreground/30 text-primary-foreground p-2 sm:p-3 rounded-full transition-smooth"
-        onClick={scrollPrev}
-        aria-label="Previous slide">
-        <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
-      </button>
-      <button
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-primary-foreground/20 backdrop-blur-sm hover:bg-primary-foreground/30 text-primary-foreground p-2 sm:p-3 rounded-full transition-smooth"
-        onClick={scrollNext}
-        aria-label="Next slide">
-        <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
-      </button>
-
       {/* Dots Indicator */}
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {slides.map((_, index) => (
@@ -137,7 +122,7 @@ const HeroSlider = () => {
             key={index}
             className={`h-2 rounded-full transition-all ${
               index === selectedIndex
-                ? "w-8 bg-primary-foreground"
+                ? "w-2 bg-primary-foreground"
                 : "w-2 bg-primary-foreground/40 hover:bg-primary-foreground/60"
             }`}
             onClick={() => emblaApi?.scrollTo(index)}

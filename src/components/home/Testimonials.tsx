@@ -7,27 +7,30 @@ const Testimonials = () => {
       name: "Sarah Johnson",
       role: "Operations Manager",
       company: "Global Logistics Inc.",
-      content: "Brickspring's weighbridge management system has revolutionized our operations. The accuracy and reliability are unmatched.",
+      content:
+        "Brickspring's weighbridge management system has revolutionized our operations. The accuracy and reliability are unmatched.",
       rating: 5,
     },
     {
-      name: "Michael Chen",
+      name: "Kisyet Tea Factory",
       role: "IT Director",
       company: "TechCorp Industries",
-      content: "Their cybersecurity services gave us peace of mind. The penetration testing revealed vulnerabilities we didn't know existed.",
+      content:
+        "Their cybersecurity services gave us peace of mind. The penetration testing revealed vulnerabilities we didn't know existed.",
       rating: 5,
     },
     {
       name: "Emily Rodriguez",
       role: "Procurement Head",
-      company: "Manufacturing Solutions Ltd.",
-      content: "Outstanding product quality and exceptional customer service. The weighing equipment exceeded our expectations.",
+      company: "Mr Green Ltd.",
+      content:
+        "Outstanding product quality and exceptional customer service. The weighing equipment exceeded our expectations.",
       rating: 5,
     },
   ];
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="py-10 bg-secondary/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="mb-4">What Our Clients Say</h2>
@@ -45,10 +48,14 @@ const Testimonials = () => {
                     <Star key={i} className="h-5 w-5 fill-accent text-accent" />
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-6 italic">"{testimonial.content}"</p>
+                <p className="text-muted-foreground mb-6 italic">
+                  "{testimonial.content}"
+                </p>
                 <div className="border-t pt-4">
                   <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {testimonial.role}
+                  </p>
                   <p className="text-sm text-accent">{testimonial.company}</p>
                 </div>
               </CardContent>

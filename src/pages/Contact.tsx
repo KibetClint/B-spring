@@ -1,7 +1,13 @@
 import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,7 +21,7 @@ const Contact = () => {
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,10 +30,12 @@ const Contact = () => {
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -36,12 +44,13 @@ const Contact = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="gradient-hero py-20">
+        <section className="gradient-hero py-10 text-center">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-primary-foreground mb-6">Contact Us</h1>
               <p className="text-xl text-primary-foreground/90">
-                Get in touch with our team. We're here to help with your questions and requirements.
+                Get in touch with our team. We're here to help with your
+                questions and requirements.
               </p>
             </div>
           </div>
@@ -60,8 +69,12 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <p className="text-muted-foreground text-sm mb-2">Call us directly</p>
-                        <a href="tel:+254725903309" className="text-accent hover:underline">
+                        <p className="text-muted-foreground text-sm mb-2">
+                          Call us directly
+                        </p>
+                        <a
+                          href="tel:+254725903309"
+                          className="text-accent hover:underline">
                           +254 725 903309
                         </a>
                       </div>
@@ -77,8 +90,12 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <p className="text-muted-foreground text-sm mb-2">Send us an email</p>
-                        <a href="mailto:info@brickspring.co.ke" className="text-accent hover:underline">
+                        <p className="text-muted-foreground text-sm mb-2">
+                          Send us an email
+                        </p>
+                        <a
+                          href="mailto:info@brickspring.co.ke"
+                          className="text-accent hover:underline">
                           info@brickspring.co.ke
                         </a>
                       </div>
@@ -94,8 +111,14 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Office</h3>
-                        <p className="text-muted-foreground text-sm mb-2">Visit us at</p>
-                        <p className="text-sm">P.O. Box 373-20210<br />Litein, Kericho, Kenya</p>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          Visit us at
+                        </p>
+                        <p className="text-sm">
+                          P.O. Box 373-20210
+                          <br />
+                          Litein, Kericho, Kenya
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -109,8 +132,14 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Business Hours</h3>
-                        <p className="text-muted-foreground text-sm mb-2">We're open</p>
-                        <p className="text-sm">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
+                        <p className="text-muted-foreground text-sm mb-2">
+                          We're open
+                        </p>
+                        <p className="text-sm">
+                          Mon - Fri: 9:00 AM - 6:00 PM
+                          <br />
+                          Sat: 10:00 AM - 4:00 PM
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -121,8 +150,13 @@ const Contact = () => {
               <div className="lg:col-span-2">
                 <Card className="border-2">
                   <CardHeader>
-                    <CardTitle className="text-2xl">Send us a Message</CardTitle>
-                    <CardDescription>Fill out the form below and we'll get back to you as soon as possible</CardDescription>
+                    <CardTitle className="text-2xl">
+                      Send us a Message
+                    </CardTitle>
+                    <CardDescription>
+                      Fill out the form below and we'll get back to you as soon
+                      as possible
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <form onSubmit={handleSubmit} className="space-y-6">
@@ -190,7 +224,11 @@ const Contact = () => {
                         />
                       </div>
 
-                      <Button type="submit" variant="hero" size="lg" className="w-full md:w-auto">
+                      <Button
+                        type="submit"
+                        variant="hero"
+                        size="lg"
+                        className="w-full md:w-auto">
                         Send Message
                       </Button>
                     </form>

@@ -4,7 +4,7 @@ import { ArrowRight, Mail, Phone } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-20 gradient-hero relative overflow-hidden">
+    <section className="py-10 gradient-hero relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
       </div>
